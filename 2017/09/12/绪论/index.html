@@ -97,15 +97,20 @@
 
 
 
+<meta name="description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
 <meta name="keywords" content="数据结构,第一章,绪论">
 <meta property="og:type" content="article">
 <meta property="og:title" content="绪论">
 <meta property="og:url" content="http://leeyonghua.com/2017/09/12/绪论/index.html">
 <meta property="og:site_name" content="魂道子">
+<meta property="og:description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-12T08:56:51.809Z">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/112121537961195.png">
+<meta property="og:updated_time" content="2017-09-12T10:38:10.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="绪论">
+<meta name="twitter:description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
+<meta name="twitter:image" content="http://obf3hxdza.bkt.clouddn.com/112121537961195.png">
 
 
 
@@ -378,7 +383,58 @@
       
 
       
-        
+        <p>这个系列将作为我自己的一个读书笔记和课后总结</p>
+<p>使用教材：<strong>数据结构</strong>（C语言版）      严蔚敏 吴伟明 </p>
+<h1 id="What-is-Data-Structure"><a href="#What-is-Data-Structure" class="headerlink" title="What is Data Structure?"></a><strong>What is Data Structure?</strong></h1><p>简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p>
+<p>数据结构是数据及相互之间的联系</p>
+<h1 id="程序设计的实质"><a href="#程序设计的实质" class="headerlink" title="程序设计的实质"></a><strong>程序设计的实质</strong></h1><p><strong>数据表示</strong>：将数据存储在计算机（内存）中</p>
+<p><strong>数据处理</strong>：处理数据，设计方案（算法）</p>
+<h1 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a><strong>基本概念和术语</strong></h1><p><strong>数据</strong>（data）是对客观事物的符号表示，在计算机学科中是指所有能输入到计算机中并被计算机程序处理的符号的总称。</p>
+<p>在计算机领域中，data是所有能被计算机加工的对象</p>
+<p><strong>数据元素</strong>（data element）是数据的基本单位，在计算机程序中通常作为一个整体进行考虑和处理。</p>
+<p>有时，一个数据元素可由若干个<strong>数据项</strong>（data item）组成。</p>
+<p>数据项是数据的不可分割的最小单位。</p>
+<p><strong>数据对象</strong>（object）是性质相同的数据元素的集合，是数据的一个子集。</p>
+<p><img src="http://obf3hxdza.bkt.clouddn.com/112121537961195.png" alt="image"></p>
+<h1 id="4类基本结构"><a href="#4类基本结构" class="headerlink" title="4类基本结构"></a>4类基本结构</h1><p><strong>1. 集合</strong>：<br>结构中的数据元素之间除了“同属于一个集合”的关系外，无其他关系</p>
+<p><strong>2. 线性结构</strong>：<br>结构中的数据元素之间存在一个对一个的关系</p>
+<p><strong>3. 树形结构</strong>：<br>结构中的数据元素之间存在一个对多个的关系</p>
+<p><strong>4. 图状结构或网状结构</strong>：<br>结构中的数据元素之间存在多个对多个的关系</p>
+<hr>
+<p><strong>数据结构的形式定义</strong>：<br>    数据结构是一个二元组</p>
+<pre><code>Data_Structure = （D, S）
+</code></pre><p>其中，D是数据结构的有限集，S是D上关系的有限集。</p>
+<p>## </p>
+<p><strong>数据结构在计算机中的表示（映像）称为数据的物理结构，又称存储结构</strong></p>
+<p>在计算机中，我们可以用一个由若干个<strong>位</strong>（bit）组合起来形成的一个位串表示一个数据元素，通常称这个位串为<strong>元素</strong>（element）或<strong>结点</strong>（node）。</p>
+<p>当数据元素由若干数据项组成时，位串中对应于各个数据项的<strong>子位串</strong>称为<strong>数据域</strong>（data field），元素或结点可看成是数据元素在计算机中的映像。</p>
+<h1 id="数据元素的关系在计算机中的两种表示方法："><a href="#数据元素的关系在计算机中的两种表示方法：" class="headerlink" title="数据元素的关系在计算机中的两种表示方法："></a>数据元素的关系在计算机中的两种表示方法：</h1><p><strong>1. 顺序映像</strong></p>
+<p><strong>2. 非顺序映像</strong></p>
+<p>由此得到两种不同的存储结构：</p>
+<ul>
+<li>顺序存储结构</li>
+<li>链式存储结构</li>
+</ul>
+<p>顺序映像的特点是借助元素在存储器中的<strong>相对位置</strong>来表示数据元素之间的逻辑关系。</p>
+<p>非顺序映像的特点是借助指示元素存储地址的<strong>指针</strong>（pointer）表示数据元素之间的逻辑关系。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><strong>数据类型</strong>是和数据结构密切相关的一个概念，它最早出现在高级程序语言中，用以刻画（程序）操作对象的特性。</p>
+<p>数据类型是一个值的集合和定义在这个值集上的一组操作的总称。</p>
+<h2 id="抽象数据类型（Abstract-Data-Type-简称ADT）"><a href="#抽象数据类型（Abstract-Data-Type-简称ADT）" class="headerlink" title="抽象数据类型（Abstract Data Type,简称ADT）"></a>抽象数据类型（Abstract Data Type,简称ADT）</h2><p>ADT是指一个数学模型以及定义在该模型上的一组操作。</p>
+<p>抽象数据类型和数序类型实质上是一个概念。</p>
+<h1 id="一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"><a href="#一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分" class="headerlink" title="一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"></a>一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分</h1><p>抽象数据类型的定义由一个值域和定义在该值域上的一组操作组成，按照其值的不同特性，可细分为下列三种类型：</p>
+<p><strong>原子类型</strong>（atomic data type）属原子类型的变量的值是不可分解的。</p>
+<p><strong>固定聚合类型</strong>（fixed-aggregate data type）属该类型的变量，其值由确定数目的成分按某种结构组成。</p>
+<p><strong>可变聚合类型</strong>（variable-aggregate data type）和固定聚合类型相比较，构成可变聚合类型“值”的成分的数目不确定。</p>
+<p>抽象数据类型可用三元组表示</p>
+<pre><code>(D, S, P)
+</code></pre><p>其中，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
+<pre><code>ADT 抽象数据类型名｛
+    数据对象：&lt;数据对象的定义&gt;
+    数据关系：&lt;数据关系的定义&gt;
+    数据操作：&lt;数据操作的定义&gt;
+｝ADT抽象数据类型名
+</code></pre><p><strong>多行数据类型</strong>（polymorphic data type）是指其值的成分不确定的数据类型。</p>
+
       
     </div>
     
@@ -501,8 +557,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -651,6 +716,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">What is Data Structure?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序设计的实质"><span class="nav-number">2.</span> <span class="nav-text">程序设计的实质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念和术语"><span class="nav-number">3.</span> <span class="nav-text">基本概念和术语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4类基本结构"><span class="nav-number">4.</span> <span class="nav-text">4类基本结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据元素的关系在计算机中的两种表示方法："><span class="nav-number">5.</span> <span class="nav-text">数据元素的关系在计算机中的两种表示方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型（Abstract-Data-Type-简称ADT）"><span class="nav-number">5.2.</span> <span class="nav-text">抽象数据类型（Abstract Data Type,简称ADT）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"><span class="nav-number">6.</span> <span class="nav-text">一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
