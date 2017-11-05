@@ -277,6 +277,203 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leeyonghua">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170901194831.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="魂道子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/05/CentOS7下mysql的配置/" itemprop="url">CentOS7 基本配置-安装MySQL</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T00:00:00+08:00">
+                2017-11-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习之路/" itemprop="url" rel="index">
+                    <span itemprop="name">学习之路</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习之路/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。</p>
+<p>这里有两个好用的远程登录软件</p>
+<h1 id="PuTTY和Xshell"><a href="#PuTTY和Xshell" class="headerlink" title="PuTTY和Xshell"></a>PuTTY和Xshell</h1><p>PuTTY：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">https:</span>//www.chiark.greenend<span class="meta">.org</span>.uk/~sgtatham/putty/</div></pre></td></tr></table></figure></p>
+<p>Xshell：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.netsarang.com<span class="regexp">/download/m</span>ain.html</div></pre></td></tr></table></figure>
+<p>随便选用一个即可，PuTTY体积小，功能简单，Xshell功能多样</p>
+<hr>
+<h2 id="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统"><a href="#腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统" class="headerlink" title="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统"></a>腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统</h2><p>这里我使用Xshell来登录我的云主机<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png" alt="image"></p>
+<p>主机IP是云主机配置的IP地址<br>端口为22</p>
+<p><strong>在CentOS中默认安装有MariaDB，这个是MySQL的分支，但为了需要，还是要在系统中安装MySQL，而且安装完成之后可以直接覆盖掉MariaDB。</strong></p>
+<p>下载并安装MySQL官方的 Yum Repository<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="title">@VM_60_61_redhat</span> ~]# wget -i -<span class="keyword">c</span> http://dev.mysql.com/get/mysql<span class="number">57</span>-community-<span class="keyword">release</span>-el<span class="number">7</span><span class="number">-11</span>.noarch.rpm</div></pre></td></tr></table></figure></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat <span class="symbol">~]# yum -y install http</span>:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># yum -y install mysql-community-server</span></div></pre></td></tr></table></figure>
+<p>MySQL数据库设置 </p>
+<pre><code>启动MySQL
+</code></pre><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl start mysqld.service</span></div></pre></td></tr></table></figure>
+<p>查看MySQL运行状态:</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl status mysqld.service</span></div></pre></td></tr></table></figure>
+<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105204019.png" alt="image"></p>
+<p>我们这里已经看到绿色的状态，MySQL已经运行了</p>
+<p>MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]# grep <span class="string">"password"</span> /var/<span class="keyword">log</span>/mysqld.<span class="keyword">log</span></div></pre></td></tr></table></figure>
+<p>现在进入数据库：</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># mysql -uroot -p</span></div></pre></td></tr></table></figure>
+<p>输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'new password'</span>;</span></div></pre></td></tr></table></figure>
+<p>有的时候你忘记了密码怎么办，你就无法登录进数据库了，或者说你出现了如下的情况该怎么办？<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105210708.png" alt="image"></p>
+<p>修改MySQL的登录设置： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vim /etc/my.cnf</span></div></pre></td></tr></table></figure>
+<p>在[mysqld]的段中加上一句：<br>skip-grant-tables<br>例如： </p>
+<p>保存并且退出vi。</p>
+<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211205.png" alt="image"></p>
+<p>这样我们就可以绕过</p>
+<p>现在重新启动mysql</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
+<p>现在我们已经进入了<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211524.png" alt="image"></p>
+<p>现在我们开始修改root的密码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; <span class="keyword">USE</span> <span class="title">mysql</span> ;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span>IDENTIFIED BY <span class="string">'你的新密码'</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges ;</span></div></pre></td></tr></table></figure>
+<p>现在我们把之前的/etc/my.cnf 文件中把加进去的代码删掉并保存，然后重启MySQL</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
+<p>新安装的MySQL5.7，登录时提示密码错误，安装的时候并没有更改密码，后来通过免密码登录的方式更改密码，输入update mysql.user  set password=password(‘root’) where user=’root’时提示ERROR 1054 (42S22): Unknown column ‘password’ in ‘field list’，原来是mysql数据库下已经没有password这个字段了，password字段改成了<br>authentication_string</p>
+<p>在use mysql后的操作<br>替换为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> mysql.user <span class="keyword">set</span> authentication_string=<span class="keyword">password</span>(<span class="string">'你的新密码'</span>) <span class="keyword">where</span> <span class="keyword">user</span>=<span class="string">'root'</span> ;</div></pre></td></tr></table></figure></p>
+<p>mysql5.7更改密码应该采用命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span><span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'********'</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/11/01/单链表的基本操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -942,7 +1139,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -953,7 +1150,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -964,7 +1161,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>

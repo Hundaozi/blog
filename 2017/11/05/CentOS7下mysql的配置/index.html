@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据结构,第一章,绪论," />
+  <meta name="keywords" content="CentOS7,linux，MySQL，mysql," />
 
 
 
@@ -97,20 +97,24 @@
 
 
 
-<meta name="description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
-<meta name="keywords" content="数据结构,第一章,绪论">
+<meta name="description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
+<meta name="keywords" content="CentOS7,linux，MySQL，mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="绪论">
-<meta property="og:url" content="http://leeyonghua.com/2017/09/12/绪论/index.html">
+<meta property="og:title" content="CentOS7 基本配置-安装MySQL">
+<meta property="og:url" content="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/index.html">
 <meta property="og:site_name" content="魂道子">
-<meta property="og:description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
+<meta property="og:description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/112121537961195.png">
-<meta property="og:updated_time" content="2017-09-12T10:38:10.666Z">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105204019.png">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105210708.png">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211205.png">
+<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211524.png">
+<meta property="og:updated_time" content="2017-11-05T13:45:12.470Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="绪论">
-<meta name="twitter:description" content="这个系列将作为我自己的一个读书笔记和课后总结 使用教材：数据结构（C语言版）      严蔚敏 吴伟明  What is Data Structure?简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。 数据结构是数据及相互之间的联系 程序设计的实质数据表示：将数据存储在计算机（内存）中 数据处理：处理数据，设计方案（算法） 基本概念和术语数据">
-<meta name="twitter:image" content="http://obf3hxdza.bkt.clouddn.com/112121537961195.png">
+<meta name="twitter:title" content="CentOS7 基本配置-安装MySQL">
+<meta name="twitter:description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
+<meta name="twitter:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png">
 
 
 
@@ -140,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://leeyonghua.com/2017/09/12/绪论/"/>
+  <link rel="canonical" href="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/"/>
 
 
 
 
 
-  <title>绪论 | 魂道子</title>
+  <title>CentOS7 基本配置-安装MySQL | 魂道子</title>
   
 
 
@@ -283,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/09/12/绪论/">
+    <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leeyonghua">
@@ -300,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">绪论</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7 基本配置-安装MySQL</h1>
         
 
         <div class="post-meta">
@@ -312,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-12T16:51:47+08:00">
-                2017-09-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T00:00:00+08:00">
+                2017-11-05
               </time>
             
 
@@ -346,8 +350,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习之路/数据结构/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构</span>
+                  <a href="/categories/学习之路/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -383,57 +387,51 @@
       
 
       
-        <p>这个系列将作为我自己的一个读书笔记和课后总结</p>
-<p>使用教材：<strong>数据结构</strong>（C语言版）      严蔚敏 吴伟明 </p>
-<h1 id="What-is-Data-Structure"><a href="#What-is-Data-Structure" class="headerlink" title="What is Data Structure?"></a><strong>What is Data Structure?</strong></h1><p>简单来说，数据结构是一门研究非数值计算的程序设计问题中计算机的操作对象以及它们之间的关系和操作等的学科。</p>
-<p>数据结构是数据及相互之间的联系</p>
-<h1 id="程序设计的实质"><a href="#程序设计的实质" class="headerlink" title="程序设计的实质"></a><strong>程序设计的实质</strong></h1><p><strong>数据表示</strong>：将数据存储在计算机（内存）中</p>
-<p><strong>数据处理</strong>：处理数据，设计方案（算法）</p>
-<h1 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a><strong>基本概念和术语</strong></h1><p><strong>数据</strong>（data）是对客观事物的符号表示，在计算机学科中是指所有能输入到计算机中并被计算机程序处理的符号的总称。</p>
-<p>在计算机领域中，data是所有能被计算机加工的对象</p>
-<p><strong>数据元素</strong>（data element）是数据的基本单位，在计算机程序中通常作为一个整体进行考虑和处理。</p>
-<p>有时，一个数据元素可由若干个<strong>数据项</strong>（data item）组成。</p>
-<p>数据项是数据的不可分割的最小单位。</p>
-<p><strong>数据对象</strong>（object）是性质相同的数据元素的集合，是数据的一个子集。</p>
-<p><img src="http://obf3hxdza.bkt.clouddn.com/112121537961195.png" alt="image"></p>
-<h1 id="4类基本结构"><a href="#4类基本结构" class="headerlink" title="4类基本结构"></a>4类基本结构</h1><p><strong>1. 集合</strong>：<br>结构中的数据元素之间除了“同属于一个集合”的关系外，无其他关系</p>
-<p><strong>2. 线性结构</strong>：<br>结构中的数据元素之间存在一个对一个的关系</p>
-<p><strong>3. 树形结构</strong>：<br>结构中的数据元素之间存在一个对多个的关系</p>
-<p><strong>4. 图状结构或网状结构</strong>：<br>结构中的数据元素之间存在多个对多个的关系</p>
+        <p>因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。</p>
+<p>这里有两个好用的远程登录软件</p>
+<h1 id="PuTTY和Xshell"><a href="#PuTTY和Xshell" class="headerlink" title="PuTTY和Xshell"></a>PuTTY和Xshell</h1><p>PuTTY：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">https:</span>//www.chiark.greenend<span class="meta">.org</span>.uk/~sgtatham/putty/</div></pre></td></tr></table></figure></p>
+<p>Xshell：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.netsarang.com<span class="regexp">/download/m</span>ain.html</div></pre></td></tr></table></figure>
+<p>随便选用一个即可，PuTTY体积小，功能简单，Xshell功能多样</p>
 <hr>
-<p><strong>数据结构的形式定义</strong>：<br>    数据结构是一个二元组</p>
-<pre><code>Data_Structure = （D, S）
-</code></pre><p>其中，D是数据结构的有限集，S是D上关系的有限集。</p>
-<p>## </p>
-<p><strong>数据结构在计算机中的表示（映像）称为数据的物理结构，又称存储结构</strong></p>
-<p>在计算机中，我们可以用一个由若干个<strong>位</strong>（bit）组合起来形成的一个位串表示一个数据元素，通常称这个位串为<strong>元素</strong>（element）或<strong>结点</strong>（node）。</p>
-<p>当数据元素由若干数据项组成时，位串中对应于各个数据项的<strong>子位串</strong>称为<strong>数据域</strong>（data field），元素或结点可看成是数据元素在计算机中的映像。</p>
-<h1 id="数据元素的关系在计算机中的两种表示方法："><a href="#数据元素的关系在计算机中的两种表示方法：" class="headerlink" title="数据元素的关系在计算机中的两种表示方法："></a>数据元素的关系在计算机中的两种表示方法：</h1><p><strong>1. 顺序映像</strong></p>
-<p><strong>2. 非顺序映像</strong></p>
-<p>由此得到两种不同的存储结构：</p>
-<ul>
-<li>顺序存储结构</li>
-<li>链式存储结构</li>
-</ul>
-<p>顺序映像的特点是借助元素在存储器中的<strong>相对位置</strong>来表示数据元素之间的逻辑关系。</p>
-<p>非顺序映像的特点是借助指示元素存储地址的<strong>指针</strong>（pointer）表示数据元素之间的逻辑关系。</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><strong>数据类型</strong>是和数据结构密切相关的一个概念，它最早出现在高级程序语言中，用以刻画（程序）操作对象的特性。</p>
-<p>数据类型是一个值的集合和定义在这个值集上的一组操作的总称。</p>
-<h2 id="抽象数据类型（Abstract-Data-Type-简称ADT）"><a href="#抽象数据类型（Abstract-Data-Type-简称ADT）" class="headerlink" title="抽象数据类型（Abstract Data Type,简称ADT）"></a>抽象数据类型（Abstract Data Type,简称ADT）</h2><p>ADT是指一个数学模型以及定义在该模型上的一组操作。</p>
-<p>抽象数据类型和数序类型实质上是一个概念。</p>
-<h1 id="一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"><a href="#一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分" class="headerlink" title="一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"></a>一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分</h1><p>抽象数据类型的定义由一个值域和定义在该值域上的一组操作组成，按照其值的不同特性，可细分为下列三种类型：</p>
-<p><strong>原子类型</strong>（atomic data type）属原子类型的变量的值是不可分解的。</p>
-<p><strong>固定聚合类型</strong>（fixed-aggregate data type）属该类型的变量，其值由确定数目的成分按某种结构组成。</p>
-<p><strong>可变聚合类型</strong>（variable-aggregate data type）和固定聚合类型相比较，构成可变聚合类型“值”的成分的数目不确定。</p>
-<p>抽象数据类型可用三元组表示</p>
-<pre><code>(D, S, P)
-</code></pre><p>其中，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
-<pre><code>ADT 抽象数据类型名｛
-    数据对象：&lt;数据对象的定义&gt;
-    数据关系：&lt;数据关系的定义&gt;
-    数据操作：&lt;数据操作的定义&gt;
-｝ADT抽象数据类型名
-</code></pre><p><strong>多行数据类型</strong>（polymorphic data type）是指其值的成分不确定的数据类型。</p>
+<h2 id="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统"><a href="#腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统" class="headerlink" title="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统"></a>腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统</h2><p>这里我使用Xshell来登录我的云主机<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png" alt="image"></p>
+<p>主机IP是云主机配置的IP地址<br>端口为22</p>
+<p><strong>在CentOS中默认安装有MariaDB，这个是MySQL的分支，但为了需要，还是要在系统中安装MySQL，而且安装完成之后可以直接覆盖掉MariaDB。</strong></p>
+<p>下载并安装MySQL官方的 Yum Repository<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="title">@VM_60_61_redhat</span> ~]# wget -i -<span class="keyword">c</span> http://dev.mysql.com/get/mysql<span class="number">57</span>-community-<span class="keyword">release</span>-el<span class="number">7</span><span class="number">-11</span>.noarch.rpm</div></pre></td></tr></table></figure></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat <span class="symbol">~]# yum -y install http</span>:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># yum -y install mysql-community-server</span></div></pre></td></tr></table></figure>
+<p>MySQL数据库设置 </p>
+<pre><code>启动MySQL
+</code></pre><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl start mysqld.service</span></div></pre></td></tr></table></figure>
+<p>查看MySQL运行状态:</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl status mysqld.service</span></div></pre></td></tr></table></figure>
+<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105204019.png" alt="image"></p>
+<p>我们这里已经看到绿色的状态，MySQL已经运行了</p>
+<p>MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]# grep <span class="string">"password"</span> /var/<span class="keyword">log</span>/mysqld.<span class="keyword">log</span></div></pre></td></tr></table></figure>
+<p>现在进入数据库：</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># mysql -uroot -p</span></div></pre></td></tr></table></figure>
+<p>输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'new password'</span>;</span></div></pre></td></tr></table></figure>
+<p>有的时候你忘记了密码怎么办，你就无法登录进数据库了，或者说你出现了如下的情况该怎么办？<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105210708.png" alt="image"></p>
+<p>修改MySQL的登录设置： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vim /etc/my.cnf</span></div></pre></td></tr></table></figure>
+<p>在[mysqld]的段中加上一句：<br>skip-grant-tables<br>例如： </p>
+<p>保存并且退出vi。</p>
+<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211205.png" alt="image"></p>
+<p>这样我们就可以绕过</p>
+<p>现在重新启动mysql</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
+<p>现在我们已经进入了<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211524.png" alt="image"></p>
+<p>现在我们开始修改root的密码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; <span class="keyword">USE</span> <span class="title">mysql</span> ;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span>IDENTIFIED BY <span class="string">'你的新密码'</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges ;</span></div></pre></td></tr></table></figure>
+<p>现在我们把之前的/etc/my.cnf 文件中把加进去的代码删掉并保存，然后重启MySQL</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
+<p>新安装的MySQL5.7，登录时提示密码错误，安装的时候并没有更改密码，后来通过免密码登录的方式更改密码，输入update mysql.user  set password=password(‘root’) where user=’root’时提示ERROR 1054 (42S22): Unknown column ‘password’ in ‘field list’，原来是mysql数据库下已经没有password这个字段了，password字段改成了<br>authentication_string</p>
+<p>在use mysql后的操作<br>替换为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> mysql.user <span class="keyword">set</span> authentication_string=<span class="keyword">password</span>(<span class="string">'你的新密码'</span>) <span class="keyword">where</span> <span class="keyword">user</span>=<span class="string">'root'</span> ;</div></pre></td></tr></table></figure></p>
+<p>mysql5.7更改密码应该采用命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span><span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'********'</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -480,11 +478,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+            <a href="/tags/CentOS7/" rel="tag"><i class="fa fa-tag"></i> CentOS7</a>
           
-            <a href="/tags/第一章/" rel="tag"><i class="fa fa-tag"></i> 第一章</a>
-          
-            <a href="/tags/绪论/" rel="tag"><i class="fa fa-tag"></i> 绪论</a>
+            <a href="/tags/linux，MySQL，mysql/" rel="tag"><i class="fa fa-tag"></i> linux，MySQL，mysql</a>
           
         </div>
       
@@ -497,8 +493,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/31/hello-world/" rel="next" title="新的开始">
-                <i class="fa fa-chevron-left"></i> 新的开始
+              <a href="/2017/11/01/单链表的基本操作/" rel="next" title="单链表的操作">
+                <i class="fa fa-chevron-left"></i> 单链表的操作
               </a>
             
           </div>
@@ -506,10 +502,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/01/栈-回文判断/" rel="prev" title="栈-回文判断">
-                栈-回文判断 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -730,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-Data-Structure"><span class="nav-number">1.</span> <span class="nav-text">What is Data Structure?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序设计的实质"><span class="nav-number">2.</span> <span class="nav-text">程序设计的实质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念和术语"><span class="nav-number">3.</span> <span class="nav-text">基本概念和术语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4类基本结构"><span class="nav-number">4.</span> <span class="nav-text">4类基本结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据元素的关系在计算机中的两种表示方法："><span class="nav-number">5.</span> <span class="nav-text">数据元素的关系在计算机中的两种表示方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">5.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型（Abstract-Data-Type-简称ADT）"><span class="nav-number">5.2.</span> <span class="nav-text">抽象数据类型（Abstract Data Type,简称ADT）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分"><span class="nav-number">6.</span> <span class="nav-text">一个含抽象数据类型的软件模块通常包含定义、表示、和实现3个部分</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PuTTY和Xshell"><span class="nav-number">1.</span> <span class="nav-text">PuTTY和Xshell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统</span></a></li></ol></li></ol></div>
             
 
           </div>
