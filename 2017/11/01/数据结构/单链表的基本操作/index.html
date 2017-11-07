@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CentOS7,linux，MySQL，mysql," />
+  <meta name="keywords" content="数据结构,第二章,单链表," />
 
 
 
@@ -97,24 +97,18 @@
 
 
 
-<meta name="description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
-<meta name="keywords" content="CentOS7,linux，MySQL，mysql">
+<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="keywords" content="数据结构,第二章,单链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS7 基本配置-安装MySQL">
-<meta property="og:url" content="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/index.html">
+<meta property="og:title" content="单链表的操作">
+<meta property="og:url" content="http://leeyonghua.com/2017/11/01/数据结构/单链表的基本操作/index.html">
 <meta property="og:site_name" content="魂道子">
-<meta property="og:description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105204019.png">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105210708.png">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211205.png">
-<meta property="og:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211524.png">
-<meta property="og:updated_time" content="2017-11-05T13:45:12.470Z">
+<meta property="og:updated_time" content="2017-11-01T12:36:42.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7 基本配置-安装MySQL">
-<meta name="twitter:description" content="因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。 这里有两个好用的远程登录软件 PuTTY和XshellPuTTY：1https://www.chiark.greenend.org.uk/~sgtatham/putty/ Xshell： 1http://www.netsarang.com/download/main.html 随便选用一个即可，PuTTY体积小，功">
-<meta name="twitter:image" content="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png">
+<meta name="twitter:title" content="单链表的操作">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 
 
 
@@ -144,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/"/>
+  <link rel="canonical" href="http://leeyonghua.com/2017/11/01/数据结构/单链表的基本操作/"/>
 
 
 
 
 
-  <title>CentOS7 基本配置-安装MySQL | 魂道子</title>
+  <title>单链表的操作 | 魂道子</title>
   
 
 
@@ -287,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/11/05/CentOS7下mysql的配置/">
+    <link itemprop="mainEntityOfPage" href="http://leeyonghua.com/2017/11/01/数据结构/单链表的基本操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leeyonghua">
@@ -304,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CentOS7 基本配置-安装MySQL</h1>
+          <h1 class="post-title" itemprop="name headline">单链表的操作</h1>
         
 
         <div class="post-meta">
@@ -316,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-05T00:00:00+08:00">
-                2017-11-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-01T00:00:00+08:00">
+                2017-11-01
               </time>
             
 
@@ -350,8 +344,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习之路/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/学习之路/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -387,51 +381,7 @@
       
 
       
-        <p>因为自己电脑用虚拟机很烦，也很麻烦，所以使用了云主机服务，这里我使用了腾讯云主机。</p>
-<p>这里有两个好用的远程登录软件</p>
-<h1 id="PuTTY和Xshell"><a href="#PuTTY和Xshell" class="headerlink" title="PuTTY和Xshell"></a>PuTTY和Xshell</h1><p>PuTTY：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">https:</span>//www.chiark.greenend<span class="meta">.org</span>.uk/~sgtatham/putty/</div></pre></td></tr></table></figure></p>
-<p>Xshell：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http:<span class="regexp">//</span>www.netsarang.com<span class="regexp">/download/m</span>ain.html</div></pre></td></tr></table></figure>
-<p>随便选用一个即可，PuTTY体积小，功能简单，Xshell功能多样</p>
-<hr>
-<h2 id="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统"><a href="#腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统" class="headerlink" title="腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统"></a>腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统</h2><p>这里我使用Xshell来登录我的云主机<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105202146.png" alt="image"></p>
-<p>主机IP是云主机配置的IP地址<br>端口为22</p>
-<p><strong>在CentOS中默认安装有MariaDB，这个是MySQL的分支，但为了需要，还是要在系统中安装MySQL，而且安装完成之后可以直接覆盖掉MariaDB。</strong></p>
-<p>下载并安装MySQL官方的 Yum Repository<br><figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="title">@VM_60_61_redhat</span> ~]# wget -i -<span class="keyword">c</span> http://dev.mysql.com/get/mysql<span class="number">57</span>-community-<span class="keyword">release</span>-el<span class="number">7</span><span class="number">-11</span>.noarch.rpm</div></pre></td></tr></table></figure></p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat <span class="symbol">~]# yum -y install http</span>:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></div></pre></td></tr></table></figure>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># yum -y install mysql-community-server</span></div></pre></td></tr></table></figure>
-<p>MySQL数据库设置 </p>
-<pre><code>启动MySQL
-</code></pre><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl start mysqld.service</span></div></pre></td></tr></table></figure>
-<p>查看MySQL运行状态:</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># systemctl status mysqld.service</span></div></pre></td></tr></table></figure>
-<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105204019.png" alt="image"></p>
-<p>我们这里已经看到绿色的状态，MySQL已经运行了</p>
-<p>MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]# grep <span class="string">"password"</span> /var/<span class="keyword">log</span>/mysqld.<span class="keyword">log</span></div></pre></td></tr></table></figure>
-<p>现在进入数据库：</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root<span class="symbol">@VM_60_61_redhat</span> ~]<span class="meta"># mysql -uroot -p</span></div></pre></td></tr></table></figure>
-<p>输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'new password'</span>;</span></div></pre></td></tr></table></figure>
-<p>有的时候你忘记了密码怎么办，你就无法登录进数据库了，或者说你出现了如下的情况该怎么办？<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105210708.png" alt="image"></p>
-<p>修改MySQL的登录设置： </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vim /etc/my.cnf</span></div></pre></td></tr></table></figure>
-<p>在[mysqld]的段中加上一句：<br>skip-grant-tables<br>例如： </p>
-<p>保存并且退出vi。</p>
-<p><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211205.png" alt="image"></p>
-<p>这样我们就可以绕过</p>
-<p>现在重新启动mysql</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
-<p>现在我们已经进入了<br><img src="http://obf3hxdza.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720171105211524.png" alt="image"></p>
-<p>现在我们开始修改root的密码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql&gt; <span class="keyword">USE</span> <span class="title">mysql</span> ;</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span>IDENTIFIED BY <span class="string">'你的新密码'</span></span></div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges ;</span></div></pre></td></tr></table></figure>
-<p>现在我们把之前的/etc/my.cnf 文件中把加进去的代码删掉并保存，然后重启MySQL</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@VM_60_61_redhat ~]#<span class="built_in"> service </span>mysqld restart</div></pre></td></tr></table></figure>
-<p>新安装的MySQL5.7，登录时提示密码错误，安装的时候并没有更改密码，后来通过免密码登录的方式更改密码，输入update mysql.user  set password=password(‘root’) where user=’root’时提示ERROR 1054 (42S22): Unknown column ‘password’ in ‘field list’，原来是mysql数据库下已经没有password这个字段了，password字段改成了<br>authentication_string</p>
-<p>在use mysql后的操作<br>替换为：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> mysql.user <span class="keyword">set</span> authentication_string=<span class="keyword">password</span>(<span class="string">'你的新密码'</span>) <span class="keyword">where</span> <span class="keyword">user</span>=<span class="string">'root'</span> ;</div></pre></td></tr></table></figure></p>
-<p>mysql5.7更改密码应该采用命令<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span><span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'********'</span></div></pre></td></tr></table></figure></p>
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></div><div class="line"><span class="class">&#123;</span></div><div class="line">	<span class="keyword">int</span> data;</div><div class="line">	node *next;</div><div class="line">&#125;*<span class="built_in">list</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">creat</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="built_in">list</span> = <span class="keyword">new</span> node;</div><div class="line">	<span class="built_in">list</span>-&gt;next = <span class="literal">NULL</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">tailinsert</span><span class="params">()</span>               <span class="comment">//尾插入</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> x;</div><div class="line">	node *p, *q;</div><div class="line">	q = <span class="built_in">list</span>;</div><div class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; x&amp;&amp;x != <span class="number">-1111</span>)</div><div class="line">	&#123;</div><div class="line">		p = <span class="keyword">new</span> node;</div><div class="line">		p-&gt;data = x;</div><div class="line">		p-&gt;next = <span class="literal">NULL</span>;</div><div class="line">		q-&gt;next = p;</div><div class="line">		q = p;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">output</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	node *p = <span class="built_in">list</span>-&gt;next;</div><div class="line">	<span class="keyword">while</span> (p)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">cout</span> &lt;&lt; p-&gt;data &lt;&lt; <span class="string">" "</span>;</div><div class="line">		p = p-&gt;next;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">length</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">0</span>;</div><div class="line">	node *p = <span class="built_in">list</span>-&gt;next;</div><div class="line">	<span class="keyword">while</span> (p)</div><div class="line">	&#123;</div><div class="line">		++a;</div><div class="line">		p = p-&gt;next;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> elem)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> index = <span class="number">0</span>;</div><div class="line">	node *p = <span class="built_in">list</span>-&gt;next;</div><div class="line">	<span class="keyword">while</span> (p)</div><div class="line">	&#123;</div><div class="line">		++index;</div><div class="line">		<span class="keyword">if</span> (p-&gt;data == elem)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"请选择：\n\t1.读取\n\n2.修改"</span> &lt;&lt; <span class="built_in">endl</span>&lt;&lt;<span class="string">'\t'</span>;</div><div class="line">			<span class="keyword">int</span> n;</div><div class="line">			<span class="built_in">cin</span> &gt;&gt; n;</div><div class="line">			<span class="keyword">if</span> (n == <span class="number">1</span>)</div><div class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; index &lt;&lt; <span class="string">"个数的值为"</span> &lt;&lt; p-&gt;data &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span>)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">int</span> x;</div><div class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入改变后的值:"</span>;</div><div class="line">				<span class="built_in">cin</span> &gt;&gt; x;</div><div class="line">				p-&gt;data = x;</div><div class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">"第"</span> &lt;&lt; index &lt;&lt; <span class="string">"个数的值为"</span> &lt;&lt; p-&gt;data &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">		p = p-&gt;next;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> elem)</span>        <span class="comment">//插入操作,将elem插入i</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	node *p, *q;</div><div class="line">	p = <span class="built_in">list</span>;</div><div class="line">	<span class="keyword">int</span> index = <span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span> (p&amp;&amp;index &lt; i)</div><div class="line">	&#123;</div><div class="line">		p = p-&gt;next;</div><div class="line">		index++;</div><div class="line">		<span class="keyword">if</span> (!p || index &gt; i)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"i越界"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">			<span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	q = <span class="keyword">new</span> node;</div><div class="line">	q-&gt;data = elem;</div><div class="line">	q-&gt;next = p-&gt;next;</div><div class="line">	p-&gt;next = q;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	node *p, *q;</div><div class="line">	p = <span class="built_in">list</span>;</div><div class="line">	<span class="keyword">int</span> index = <span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span> (p&amp;&amp;index &lt; i)</div><div class="line">	&#123;</div><div class="line">		p = p-&gt;next;</div><div class="line">		index++;</div><div class="line">		<span class="keyword">if</span> (!p || index &gt; i)</div><div class="line">		&#123;</div><div class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"i越界"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">			<span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	q = p-&gt;next;</div><div class="line">	p-&gt;next = q-&gt;next;</div><div class="line">	<span class="keyword">delete</span> q;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	creat();</div><div class="line">	tailinsert();</div><div class="line">	output();</div><div class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"长度为"</span>&lt;&lt;length() &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">	change(<span class="number">3</span>);</div><div class="line">	output();</div><div class="line">	insert(<span class="number">5</span>, <span class="number">6</span>);</div><div class="line">	output();</div><div class="line">	Delete(<span class="number">1</span>);</div><div class="line">	output();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -478,9 +428,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CentOS7/" rel="tag"><i class="fa fa-tag"></i> CentOS7</a>
+            <a href="/tags/数据结构/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
           
-            <a href="/tags/linux，MySQL，mysql/" rel="tag"><i class="fa fa-tag"></i> linux，MySQL，mysql</a>
+            <a href="/tags/第二章/" rel="tag"><i class="fa fa-tag"></i> 第二章</a>
+          
+            <a href="/tags/单链表/" rel="tag"><i class="fa fa-tag"></i> 单链表</a>
           
         </div>
       
@@ -493,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/01/单链表的基本操作/" rel="next" title="单链表的操作">
-                <i class="fa fa-chevron-left"></i> 单链表的操作
+              <a href="/2017/11/01/数据结构/栈-回文判断/" rel="next" title="栈-回文判断">
+                <i class="fa fa-chevron-left"></i> 栈-回文判断
               </a>
             
           </div>
@@ -502,6 +454,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/05/linux/CentOS7下mysql的配置/" rel="prev" title="CentOS7 基本配置-安装MySQL">
+                CentOS7 基本配置-安装MySQL <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -553,17 +509,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -581,7 +528,7 @@
             
               <a href="/archives">
             
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -592,7 +539,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -603,7 +550,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -712,22 +659,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PuTTY和Xshell"><span class="nav-number">1.</span> <span class="nav-text">PuTTY和Xshell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS-7操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">腾讯云主机的配置官网已有，照着做就行，在云主机上装一个CentOS 7操作系统</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
